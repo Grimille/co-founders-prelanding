@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'Gill Sans';
+  src: local('Gill Sans'), local('GillSans'),
+      url('fonts/GillSans.woff2') format('woff2'),
+      url('fonts/GillSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Condensed';
+  src: local('DIN Condensed Bold'), local('DINCondensed-Bold'),
+      url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+      url('fonts/DINCondensed-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blestive Script';
+  src: local('Blestive Script PERSONAL USE Regular'), local('BlestiveScriptPERSONALUSE-Regular'),
+      url('fonts/BlestiveScriptPERSONALUSE-Regular.woff2') format('woff2'),
+      url('fonts/BlestiveScriptPERSONALUSE-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #C38F00;
+  --primary-shade-color: #BB9222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/images/background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.man-standing {
+  position: absolute;
+  top: 0; left: 0;
+  background-image: url('/images/man-standing.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -66%, 0);
+  color: white;
+  max-width: 700px;
+  width: 100%;
+  user-select: none;
+}
+
+.brand-watermark {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.brand-name {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  line-height: 0.5;
+}
+
+.brand-name .co {
+  font-size: 169px;
+  font-family: 'Blestive Script', cursive;
+  transform: translate3d(6px, -100%, 0);
+}
+
+.brand-name .founders {
+  font-size: 149px;
+  font-family: 'DIN Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+.brand-catch {
+  position: relative;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--primary-shade-color);
+  letter-spacing: 4px;
+  z-index: 3;
+}
+
+.hero {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  z-index: 2000;
+  opacity: 0;
+}
+
+.real-hero {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 45.25%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  color: white;
+  max-width: 700px;
+  width: 100%;
+  user-select: none;
+  opacity 0.5;
+  z-index: 20;
+}
+
+.cta-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.btn-cta {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0.5em;
+  color: white;
+  pointer-events: auto;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-cta::before,
+.btn-cta::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.btn-cta:last-child {
+  margin-left: 2em;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.btn-secondary {
+  color: #0F0F0F;
+}
+
+.btn-cta span {
+	display: inline-block;
+	position: relative;
+}
+
+.btn-cta::before {
+	content: '';
+	background: var(--primary-color);
+  border-radius: 0.5em;
+	transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+}
+
+.btn-cta:hover::before {
+	transform: scale3d(0.95, 0.85, 1) translate3d(1px, 1px, 0);
+}
+
+.btn-cta::after {
+	content: '';
+	border: 1px solid var(--primary-color);
+	transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+	border-radius: 0.5em;
+	transform: scale3d(0.85, 0.65, 1);
+}
+
+.btn-cta:hover::after {
+	transform: scale3d(1,1,1);
+}
+
+.btn-secondary::before {
+	content: '';
+	background: #FFF;
+}
+
+.btn-secondary::after {
+	content: '';
+	border: 1px solid #FFF;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container, .real-hero  {
+    max-width: 500px;
+  }
+
+  .brand-name .co {
+    font-size: 139px;
+  }
+  
+  .brand-name .founders {
+    font-size: 119px;
+  }
+  
+  .brand-catch {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .man-standing {
+    z-index: -1;
+  }
+
+  .hero-container {
+    max-width: 90%;
+    margin-top: 2em;
+  }
+
+  .hero {
+    opacity: 1;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  .real-hero {
+    display: none;
+  }
+
+  .brand-name .co {
+    font-size: 89px;
+  }
+  
+  .brand-name .founders {
+    font-size: 69px;
+  }
+  
+  .brand-catch {
+    font-size: 1.25rem;
+  }
+
+  .cta-container {
+    flex-flow: column nowrap;
+  }
+
+  .btn-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-cta:last-child {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
