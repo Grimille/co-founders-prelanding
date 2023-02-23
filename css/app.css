@@ -22,9 +22,11 @@
   font-family: 'Blestive Script';
   src:
       url('/fonts/BlestiveScriptPERSONALUSE-Regular.woff2') format('woff2'),
-      url('/fonts/BlestiveScriptPERSONALUSE-Regular.woff') format('woff');
+      url('/fonts/BlestiveScriptPERSONALUSE-Regular.woff') format('woff'),
+      url('/fonts/BlestiveScriptPERSONALUSE-Regular.ttf') format('truetype'),
+      url('/fonts/BlestiveScriptPERSONALUSE-Regular.svg#BlestiveScriptPERSONALUSE-Regular') format('svg');
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
