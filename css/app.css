@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Gill Sans';
-  src: local('Gill Sans'), local('GillSans'),
-      url('fonts/GillSans.woff2') format('woff2'),
-      url('fonts/GillSans.woff') format('woff');
+  src:
+      url('/fonts/GillSans.woff2') format('woff2'),
+      url('/fonts/GillSans.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: 'DIN Condensed';
-  src: local('DIN Condensed Bold'), local('DINCondensed-Bold'),
-      url('fonts/DINCondensed-Bold.woff2') format('woff2'),
-      url('fonts/DINCondensed-Bold.woff') format('woff');
+  src:
+      url('/fonts/DINCondensed-Bold.woff2') format('woff2'),
+      url('/fonts/DINCondensed-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -20,9 +20,9 @@
 
 @font-face {
   font-family: 'Blestive Script';
-  src: local('Blestive Script PERSONAL USE Regular'), local('BlestiveScriptPERSONALUSE-Regular'),
-      url('fonts/BlestiveScriptPERSONALUSE-Regular.woff2') format('woff2'),
-      url('fonts/BlestiveScriptPERSONALUSE-Regular.woff') format('woff');
+  src:
+      url('/fonts/BlestiveScriptPERSONALUSE-Regular.woff2') format('woff2'),
+      url('/fonts/BlestiveScriptPERSONALUSE-Regular.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -101,6 +101,7 @@ body {
   font-size: 149px;
   font-family: 'DIN Condensed', sans-serif;
   text-transform: uppercase;
+  transform: translate3d(0, -35%, 0);
 }
 
 .brand-catch {
